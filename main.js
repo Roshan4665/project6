@@ -10,7 +10,7 @@ body.onclick = function () {
     console.log(tc);
     tc++;
     score.innerHTML = "Score : " + hits + "/" + tc;
-    if (tc == 50) {
+    if (tc == 10) {
 
         result.style.display = "flex";
         result.style.fontSize = "2rem";
@@ -21,7 +21,7 @@ body.onclick = function () {
         result.style.width = "90vw";
         result.style.borderRadius = "15px";
         result.style.position = "absolute";
-        result.style.top = "5vh";
+        result.style.top = "10vh";
         result.style.left = "5vw";
         result.innerHTML = "Your Score: " + hits + "/" + tc;
 
@@ -32,9 +32,11 @@ body.onclick = function () {
 }
 score.innerHTML = "Score : " + hits + "/" + tc;
 box.style.position = "absolute";
-
+let sz=20;
 box.onclick = function () {
-
+    box.style.height=sz+"vh";
+    box.style.width=sz+"vh";
+    sz-=(sz/20);
     hits++;
     let val1 = parseInt(Math.random() * 100 + Date.now());
     let val2 = Math.random() * 100;
@@ -66,15 +68,17 @@ box.onclick = function () {
 
 }
 let btn = document.createElement('div');
-btn.innerHTML = "RESTART";
+btn.innerHTML = "&#8634;";
+btn.style.fontSize="3rem"
 btn.style.position = "fixed";
-btn.style.top = "5vh";
-btn.style.height = "5vh";
-btn.style.width = "10vw";
+btn.style.top = "0";
+btn.style.right="0";
+btn.style.height="10vh";
+btn.style.width="10vh";
 btn.style.justifyContent = 'center';
 btn.style.display = "flex";
 btn.style.alignItems = "center";
-btn.style.backgroundColor = "pink";
+btn.style.backgroundColor = "#33FFF7";
 btn.onclick = function () {
     result.style.display = 'none';
     tc = -1;
