@@ -10,7 +10,7 @@ body.onclick = function () {
     console.log(tc);
     tc++;
     score.innerHTML = "Score : " + hits + "/" + tc;
-    if (tc == 10) {
+    if (tc == 50) {
 
         result.style.display = "flex";
         result.style.fontSize = "2rem";
